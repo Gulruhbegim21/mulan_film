@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Mulan_Film By Gulruhbegim</title>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="img/netflix.png" width="140" height="100" alt=""></a>
+		<ul class="navigation">
+			<li><a href="">Home</a></li>
+			<li><a href="">TV Shows</a></li>
+			<li><a href="">Movies</a></li>
+			<li><a href="">Latest</a></li>
+			<li><a href="">My List</a></li>
+		</ul>
+		<div class="search">
+			<input type="text" placeholder="search">
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+	</header>
+	<div class="banner">
+		<img src="img/mulan01.jpg" class="bg" alt="">
+		<div class="content">
+			<img src="img/muli.webp" alt="" width="350" class="movieTitle">
+			<h4>
+				<span> 2020 </span>
+				<span><i> 12+ </i></span>
+				<span> 1h 55minute </span>
+				<span> Action </span>
+			</h4>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, eum nobis sit, maiores numquam nihil architecto sint veniam excepturi rerum aliquam et quod error voluptatem. Commodi tenetur minima, eaque debitis fugiat eligendi, eum rerum ipsum. Similique illo voluptate error voluptatum.</p>
+			<div class="buttons">
+				<a href="#"><img src="img/play-btn.svg" width="15" alt=""> Play</a>
+				<a href="#"> <img src="img/plus.svg" width="15" alt=""> My List</a>
+			</div>
+		</div>
+		<a href="#" class="play" onclick="toggleVideo();"><img src="img/play.svg" alt="">Watch Trailer.</a>
+	</div>
+	<div class="trailer">
+		<video src="img/video.mp4" controls="true" ></video>
+		<img src="img/close.svg" width="15" onclick="toggleVideo();" class="close" alt="">
+	</div>
+	<script>
+		function toggleVideo(){
+			const trailer = document.querySelector('.trailer');
+			const video = document.querySelector('video');
+			trailer.classList.toggle('active')
+			video.currentTime=0;
+			video.pause();
+		}
+	</script>
+</body>
+</html>
